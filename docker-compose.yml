@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  arith:
+    container_name: arith
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - traefik.http.routers.arith.rule=Host(`arith.boswell-r.xyz`)
+      - traefik.http.routers.arith.tls=true
+      - traefik.http.routers.arith.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    networks:
+      - web
+      - internal
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false

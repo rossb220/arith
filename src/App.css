@@ -1,0 +1,35 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 1.5rem;
+}
+
+.app div {
+  padding-bottom: 1.5rem;
+}
+
+.btn {
+  color: #FFFFFF;
+  background: salmon;
+  padding: 1rem 1rem;
+  border-radius: 100px;
+  font-weight: bold;
+
+}
+
+.btn:hover {
+  opacity: .8;
+
+}
+
+.btn + .btn {
+  margin-left: .5rem;
+}
+
+.controls__section {
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+}
